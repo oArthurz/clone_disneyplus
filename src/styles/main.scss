@@ -1,13 +1,68 @@
-$bgColor: rgb(0, 255, 68);
-$hdColor: rgb(54, 189, 216);
-body
+@use '_hero.scss';
+*
 {
-    background-color: $bgColor;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header
+$CorDeFundo: #140404;
+$CorTextoPrincipal: silver;
+$CorTextoSecundario: #f9f9f9;
 
-
+body
 {
-  background-color: $hdColor;
+  background-color: $CorDeFundo;
+}
+
+@mixin title($fontSize: 28px)
+{
+  @include text($fontSize);
+  color: $CorTextoSecundario;
+}
+
+
+@mixin text($fontSize: 16px)
+{
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  color: $CorTextoPrincipal;
+}
+
+.text--big
+{
+  @include text(18px);
+}
+
+.text
+{
+  @include text;
+}
+
+.text--small
+{
+  @include text(12px);
+}
+
+
+.title--big
+{
+  @include title(44px);
+}
+
+.title
+{
+  @include title(40px);
+}
+
+.title--small
+{
+  @include title(28px);
+}
+
+.link-text
+{
+  @include text(18px);
+  color: $CorTextoSecundario;
+  text-decoration: underline;
 }
