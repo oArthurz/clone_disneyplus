@@ -1,5 +1,7 @@
+@use '_shows.scss';
 @use '_variaveis.scss';
 @use '__hero.scss';
+@use '_plans.scss';
 
 @font-face
 {
@@ -20,12 +22,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Avenir, sans-serif;
 }
 
 body
 {
   background-color: variaveis.$CorDeFundo;
-  font-family: Avenir, sans-serif;
 }
 
 @mixin title($fontSize: 28px)
@@ -78,4 +80,18 @@ body
   @include text(18px);
   color: variaveis.$CorTextoSecundario;
   text-decoration: underline;
+}
+
+.button
+{
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  color: variaveis.$CorTextoSecundario;
+  background-color: #6421FF;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 2vw;
+  margin-bottom: 8px;
 }
